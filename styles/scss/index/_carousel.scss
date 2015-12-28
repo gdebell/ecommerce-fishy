@@ -1,0 +1,48 @@
+@mixin carouselBox {
+  height: $carousel-height;
+  width: 100%;
+}
+
+.carousel {
+  article ul {
+    @include carouselBox;
+    margin: 0;
+
+    li {
+      @include carouselBox;
+      
+      background-position: 50%;
+      list-style: none;
+      opacity: 0;
+      position: absolute;
+
+      &:first-child {
+        opacity: 1;
+      }
+
+      &.active {
+        display: block;
+      }
+    }  
+  }
+
+  aside {
+    bottom: calc(#{$carousel-height / 2});
+    position: relative;
+
+    a {
+      background: $dark-grey;
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px;
+
+      &:first-child {
+        padding-right: 15px;
+      }
+
+      &:last-child {
+        padding-left: 15px;
+      }
+    }
+  }
+}
