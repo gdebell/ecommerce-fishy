@@ -1,0 +1,61 @@
+@import "./shared/variables";
+@import "./shared/typography";
+@import "./shared/nav";
+@import "./shared/footer";
+
+.product-heading {
+  margin-top: 75px;
+  text-align: center;
+}
+
+.product-listing {
+  margin-top: 50px;
+
+  .hidden {
+    display: none;
+  }
+
+  .product {
+    margin-bottom: 25px;
+
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  .product-img {
+    height: auto;
+    width: 100%;
+
+    img {
+      height: 250px;
+      width: 100%;
+    }
+  }  
+}
+
+.sidebar {
+  .sorter {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    border-top: 1px solid $light-grey;
+    padding-top: 25px;
+
+    li {
+      font-style: italic;
+      list-style: none;
+
+      a, a:visited {
+        color: $dark-grey;
+        text-decoration: none;        
+      }
+
+      a.active, a:hover {
+        color: $light-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
