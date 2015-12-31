@@ -79,6 +79,11 @@ nav {
   display: block;
   margin: 20px 35px 20px 0;
 
+  a {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+
   i {
     margin-left: 15px;
   }

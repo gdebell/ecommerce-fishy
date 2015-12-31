@@ -61,6 +61,9 @@ nav ul.sub-menu {
   border-radius: 10px;
   display: block;
   margin: 20px 35px 20px 0; }
+  .checkout a {
+    color: #2D2D2D;
+    text-decoration: none; }
   .checkout i {
     margin-left: 15px; }
   .checkout span {
