@@ -200,9 +200,9 @@ footer {
   margin: 0;
   padding: 10px;
   text-align: center; }
-  .cc-message p.success {
+  .cc-message p.message-success {
     color: white;
     background: #1EAEDB; }
-  .cc-message p.warning {
+  .cc-message p.message-warning {
     background: #EFEFEF;
     color: #2D2D2D; }

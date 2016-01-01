@@ -1,8 +1,9 @@
 window.allFieldsValid = (function () {
   $(function () {
     $(".required-presence").on("keyup focus", checkPresence);
-    $(".required-state").on("click change", checkPresence);
+    $(".required-state, .cc-mm, .cc-yy").on("click change", checkPresence);
     $(".required-zip").on("keyup focus", checkZip);
+    $(".cc-number").on("keyup", checkCardNumber);
     $(".copy input[type='checkbox']").on("change", copyShippingToBilling);
   });
 
@@ -12,21 +13,38 @@ window.allFieldsValid = (function () {
   };
 
   function checkZip () {
-    var zip    = $(this).val().replace("-","");
-    var parsed = parseInt(zip).toString();
+    var zip = $(this).val().replace(/[^0-9]/g,"");
 
-    if ( parsed.length === 5 ) { $(this).removeClass("warning") }
-    else if ( parsed.length > 5 ) { 
-      var main      = parsed.substring(0,5);
-      var extra     = parsed.substring(5);
-      var formatted = main + "-" + extra;
-      
+    if ( zip.length === 5 ) { $(this).removeClass("warning") }
+    else if ( zip.length > 5 ) { 
+      var formatted = formatZip(zip);
       $(this).val(formatted);
     } else { $(this).addClass("warning") };
   };
 
+  function formatZip (zip) {
+    var main  = zip.substring(0,5);
+    var extra = zip.substring(5);
+    
+    return main + "-" + extra;
+  };
+
+  function checkCardNumber () {
+    var number = $(this).val().replace(/[^0-9]/g,"");
+
+    if ( number.length > 4 ) {
+      var separated = number.replace(/(.{4})/g, "$1 ");
+      $(this).val(separated);
+    };
+
+    ( number.length < 16 ) ? $(this).addClass("warning") : $(this).removeClass("warning");
+  };
+
   function copyShippingToBilling () {
-    if ( !$(this).is(":checked") ) { $(".billing input, .billing select").val('') }
+    if ( !$(this).is(":checked") ) { $(".billing .buyer-details input, \
+                                        .billing .buyer-details select, \
+                                        .billing .address-details input, \
+                                        .billing .address-details select").val('') }
     else {
       $(".shipping input, .shipping select").each(function () {
         var shippingVal     = $(this).val();

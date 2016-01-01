@@ -65,12 +65,12 @@
   padding: 10px;
   text-align: center;
   
-  &.success {
+  &.message-success {
     color: white;
     background: $light-blue;
   }
 
-  &.warning {
+  &.message-warning {
     background: $light-grey;
     color: $dark-grey;
   }

@@ -203,23 +203,46 @@
           <div class="credit-card-details">
             <div class="row">
               <label for="cc-number">Card Number<span>*</span></label>
-              <input class="cc-number u-full-width" type="text" placeholder="Credit Card Number" name="cc-number">
+              <input class="required cc-number u-full-width" type="text" maxlength="19" placeholder="Credit Card Number" name="cc-number">
             </div>
             <div class="row">
               <div class="one-half column">
                 <label for="cc-expiration">Expiration<span>*</span></label>
                 <div class="row">
                   <div class="six columns">
-                    <input class="cc-mm u-full-width" maxlength="2" type="text" placeholder="MM" name="cc-mm">  
+                    <select name="cc-mm" class="required cc-mm u-full-width">
+                      <option value=""> - MM - </option>
+                      <option value="01">01 - Jan</option>
+                      <option value="02">02 - Feb</option>
+                      <option value="03">03 - Mar</option>
+                      <option value="04">04 - Apr</option>
+                      <option value="05">05 - May</option>
+                      <option value="06">06 - Jun</option>
+                      <option value="07">07 - Jul</option>
+                      <option value="08">08 - Aug</option>
+                      <option value="09">09 - Sep</option>
+                      <option value="10">10 - Oct</option>
+                      <option value="11">11 - Nov</option>
+                      <option value="12">12 - Dec</option>
+                    </select>
                   </div>
                   <div class="six columns">
-                    <input class="cc-yy u-full-width" maxlength="2" type="text" placeholder="YY" name="cc-yy">  
+                    <select name="cc-yy" class="required cc-yy u-full-width">
+                      <option value=""> - YY - </option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
                   </div>
                 </div>
               </div>
               <div class="one-half column">
                 <label for="cc-cvc">CVC<span>*</span></label>
-                <input class="cc-cvc u-full-width" type="text" placeholder="CVC" name="cc-cvc">
+                <input class="required required-presence cc-cvc u-full-width" type="text" placeholder="CVC" name="cc-cvc">
               </div>
             </div>
 
