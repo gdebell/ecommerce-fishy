@@ -27,6 +27,7 @@ footer {
     font-weight: 300;
     list-style: none;
     margin: 25px;
+    padding-left: 0px;
     
     li {
       border-bottom: 1px solid darken($light-grey, 50%);
@@ -50,6 +51,8 @@ footer {
   }
 
   .product-list {
+    padding-left: 0;
+
     li {
       border: none;
       margin-top: 10px;
@@ -65,9 +68,7 @@ footer {
     .product-detail {
       color: $light-grey;
       display: inline-block;
-      margin: 10px 20px;
-      position: relative;
-      top: -10px;
+      margin: 0 20px;
 
       h6 {
         margin-bottom: 0;

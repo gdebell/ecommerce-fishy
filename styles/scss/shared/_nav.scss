@@ -2,7 +2,6 @@ header {
   background: $dark-grey;
   
   h4 {
-    margin: 0;
     padding-top: 10px;
     text-align: center;
 
@@ -11,7 +10,7 @@ header {
       text-decoration: none;
 
       &:hover {
-        color: darken($light-grey, 10%);
+        color: lighten($light-grey, 10%);
       }
     }
   }
@@ -34,7 +33,7 @@ nav {
         text-decoration: none;
 
         &:hover {
-          color: darken($light-blue, 10%);
+          color: lighten($light-blue, 10%);
         }
       }
 

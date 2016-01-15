@@ -4,9 +4,14 @@
 }
 
 .carousel {
+  div[class^="col"] {
+    padding: 0;
+  }
+
   article ul {
     @include carouselBox;
     margin: 0;
+    padding: 0;
 
     li {
       @include carouselBox;
@@ -36,12 +41,8 @@
       display: inline-block;
       padding: 10px;
 
-      &:first-child {
-        padding-right: 15px;
-      }
-
       &:last-child {
-        padding-left: 15px;
+        float: right;
       }
     }
   }

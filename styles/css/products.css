@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+a:active, a:hover {
+  color: #46c0e6; }
+
+.container-fluid {
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6, a.nav-link {
   font-family: 'Roboto', Helvetica, sans-serif;
   font-weight: 700;
@@ -9,14 +15,13 @@ h1, h2, h3, h4, h5, h6, a.nav-link {
 header {
   background: #2D2D2D; }
   header h4 {
-    margin: 0;
     padding-top: 10px;
     text-align: center; }
     header h4 a {
       color: #EFEFEF;
       text-decoration: none; }
       header h4 a:hover {
-        color: #d5d5d5; }
+        color: white; }
 
 nav ul {
   margin: 0; }
@@ -31,7 +36,7 @@ nav ul {
       padding: 5px;
       text-decoration: none; }
       nav ul li a:hover {
-        color: #188aae; }
+        color: #46c0e6; }
     nav ul li:last-child a.nav-link {
       font-weight: 700; }
     nav ul li i {
@@ -78,7 +83,7 @@ footer {
     font-weight: 700;
     text-transform: uppercase;
     color: #EFEFEF;
-    border-bottom: 1px solid #6f6f6f;
+    border-bottom: 1px solid #707070;
     margin: 25px;
     padding: 10px 0 20px;
     text-align: center; }
@@ -97,11 +102,12 @@ footer {
     text-transform: uppercase;
     font-weight: 300;
     list-style: none;
-    margin: 25px; }
+    margin: 25px;
+    padding-left: 0px; }
     footer ul span {
       font-weight: 300; }
     footer ul li {
-      border-bottom: 1px solid #6f6f6f;
+      border-bottom: 1px solid #707070;
       margin: 25px 0 0;
       padding-bottom: 25px; }
       footer ul li:last-child {
@@ -112,30 +118,30 @@ footer {
       transition: all 0.3s ease 0s; }
       footer ul a:hover {
         padding-left: 5px; }
-  footer .product-list li {
-    border: none;
-    margin-top: 10px;
-    padding-bottom: 0; }
-  footer .product-list img {
-    display: inline-block;
-    height: auto;
-    width: 50px; }
-  footer .product-list .product-detail {
-    color: #EFEFEF;
-    display: inline-block;
-    margin: 10px 20px;
-    position: relative;
-    top: -10px; }
-    footer .product-list .product-detail h6 {
-      margin-bottom: 0; }
-    footer .product-list .product-detail span {
-      color: #1EAEDB; }
-      footer .product-list .product-detail span strike {
-        color: #EFEFEF;
-        display: inline-block;
-        margin-right: 10px; }
-    footer .product-list .product-detail a:hover {
-      padding-left: 0; }
+  footer .product-list {
+    padding-left: 0; }
+    footer .product-list li {
+      border: none;
+      margin-top: 10px;
+      padding-bottom: 0; }
+    footer .product-list img {
+      display: inline-block;
+      height: auto;
+      width: 50px; }
+    footer .product-list .product-detail {
+      color: #EFEFEF;
+      display: inline-block;
+      margin: 0 20px; }
+      footer .product-list .product-detail h6 {
+        margin-bottom: 0; }
+      footer .product-list .product-detail span {
+        color: #1EAEDB; }
+        footer .product-list .product-detail span strike {
+          color: #EFEFEF;
+          display: inline-block;
+          margin-right: 10px; }
+      footer .product-list .product-detail a:hover {
+        padding-left: 0; }
   footer .news li {
     border: none;
     padding-bottom: 0; }

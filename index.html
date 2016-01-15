@@ -6,21 +6,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="stylesheet" href="vendor/css/normalize.css"></link>
-  <link rel="stylesheet" href="vendor/css/skeleton.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="styles/css/index.css"></link>
 
   <script type="text/javascript" src="vendor/js/jquery-1.11.3.min.js"></script>
 </head>
-<body>
+<body class="container-fluid">
   <header class="row">
-    <div class="four columns">
+    <div class="col-xs-3">
       <h4><a href="./index.html">e<span>Commerce</span></a></h4>
     </div>
     
-    <nav class="six columns">
+    <nav class="col-xs-6">
       <ul>
         <li><a class="nav-link" href="./products.html">Men</a></li>
         <li><a class="nav-link" href="./products.html">Women</a></li>
@@ -44,7 +43,7 @@
       </ul>
     </nav>
 
-    <aside class="two columns">
+    <aside class="col-xs-3">
       <div class="checkout">
         <p>
           <a href="./checkout.html">
@@ -59,7 +58,7 @@
 
   <section class="carousel">
     <article class="row">
-      <div class="twelve columns">
+      <div class="col-xs-12">
         <ul>
           <li style="background-image: url('http://placehold.it/1200x600/efefef/2d2d2d?text=First%20Image');"
               class="active"></li>
@@ -70,7 +69,7 @@
     </article>
     <aside>
       <a id="prev"><i class="fa fa-arrow-left"></i></a>
-      <a class="u-pull-right" id="next"><i class="fa fa-arrow-right"></i></a>
+      <a id="next"><i class="fa fa-arrow-right"></i></a>
     </aside>
   </section>
 
@@ -80,7 +79,7 @@
         <h2>New <span>Arrivals</span></h2>  
       </div>
       <div class="row">
-        <div class="four columns">
+        <div class="col-xs-4">
           <article>
             <div class="product-img">
               <img src="http://placehold.it/400/2d2d2d/efefef?text=Product%201">
@@ -93,20 +92,20 @@
           <aside>
             <p><span>$</span> 30.00</p>
             <div class="row ratings">
-              <div class="one-half column">
+              <div class="col-xs-6 column">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-o"></i>              
               </div>
-              <div class="one-half column review-count">
+              <div class="col-xs-6 column review-count">
                 <span>(31 reviews)</span>
               </div>
             </div>
           </aside>
         </div>
-        <div class="four columns">
+        <div class="col-xs-4">
           <article>
             <div class="product-img">
               <img src="http://placehold.it/400/2d2d2d/efefef?text=Product%202">
@@ -119,20 +118,20 @@
           <aside>
             <p><span>$</span> 15.00</p>
             <div class="row ratings">
-              <div class="one-half column">
+              <div class="col-xs-6 column">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>              
               </div>
-              <div class="one-half column review-count">
+              <div class="col-xs-6 column review-count">
                 <span>(3 reviews)</span>
               </div>
             </div>
           </aside>
         </div>
-        <div class="four columns">
+        <div class="col-xs-4">
           <article>
             <div class="product-img">
               <img src="http://placehold.it/400/2d2d2d/efefef?text=Product%203">
@@ -145,14 +144,14 @@
           <aside>
             <p><span>$</span> 40.00</p>
             <div class="row ratings">
-              <div class="one-half column">
+              <div class="col-xs-6 column">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>              
               </div>
-              <div class="one-half column review-count">
+              <div class="col-xs-6 column review-count">
                 <span>(28 reviews)</span>
               </div>
             </div>
@@ -164,21 +163,23 @@
   
   <section>
     <article class="signup">
-      <h2>Signup <span>Today!</span></h2>  
       <div class="container">
-        <p>Lorem ipsum Sed in anim reprehenderit laboris in nisi dolore elit. Lorem ipsum Anim non tempor in voluptate irure et nisi in occaecat quis.</p>
-        <div class="row">
-          <div class="nine columns">
-            <input class="u-full-width" type="email" placeholder="Enter your email" id="email-signup">
+        <h2>Signup <span>Today!</span></h2>
+        <div>
+          <p>Lorem ipsum Sed in anim reprehenderit laboris in nisi dolore elit. Lorem ipsum Anim non tempor in voluptate irure et nisi in occaecat quis.</p>
+          <div class="row email-input">
+            <div class="col-xs-7 col-xs-offset-1">
+              <input class="form-control" type="email" placeholder="Enter your email" id="email-signup">
+            </div>
+            <div class="col-xs-3">
+              <button class="btn btn-primary btn-md btn-block" id="email-signup-button">Signup</button>
+            </div>
           </div>
-          <div class="three columns">
-            <button class="u-full-width button-primary" id="email-signup-button">Signup</button>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="success">
-            <span>Thanks for signing up!</span>
+          <div class="row">
+            <div class="success">
+              <span>Thanks for signing up!</span>
+            </div>
           </div>
         </div>
       </div>
@@ -187,11 +188,11 @@
 
   <footer>
     <div class="row">
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>Visit</span> Us</h4>
         <div class="map"></div>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>On</span> Sale</h4>
         <ul class="product-list">
           <li>
@@ -228,7 +229,7 @@
           </li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>More</span> Info</h4>
         <ul>
           <li><a href="#">&mdash; Shipping &amp; Returns</a></li>
@@ -237,7 +238,7 @@
           <li><a href="#">&mdash; Contact Us</a></li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>In</span> The News</h4>
         <ul class="news">
           <li>
