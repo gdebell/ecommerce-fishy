@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <title>Unit 1 Project - eCommerce Site: Checkout</title>
-  
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="stylesheet" href="vendor/css/normalize.css"></link>
-  <link rel="stylesheet" href="vendor/css/skeleton.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="styles/css/checkout.css"></link>
@@ -17,11 +16,11 @@
 </head>
 <body>
   <header class="row">
-    <div class="four columns">
+    <div class="col-xs-3">
       <h4><a href="./index.html">e<span>Commerce</span></a></h4>
     </div>
     
-    <nav class="six columns">
+    <nav class="col-xs-6">
       <ul>
         <li><a class="nav-link" href="./products.html">Men</a></li>
         <li><a class="nav-link" href="./products.html">Women</a></li>
@@ -45,7 +44,7 @@
       </ul>
     </nav>
 
-    <aside class="two columns">
+    <aside class="col-xs-3">
       <div class="checkout">
         <p>
           <a href="./checkout.html">
@@ -60,12 +59,12 @@
 
   <div class="container">    
     <div class="purchase-confirmation row">
-      <div class="one-half column">
+      <div class="col-xs-6">
         <h3>Thank you <span>for your purchase!</span></h3>
       </div>
 
-      <div class="one-half column">
-        <table class="u-full-width">
+      <div class="col-xs-6">
+        <table class="table">
           <thead>
             <tr>
               <th>Product</th>
@@ -96,48 +95,54 @@
 
     <form action="#">
       <div class="row">
-        <div class="shipping one-half column">
+        <div class="shipping col-xs-6">
           <h5>Shipping</h5>
-          <div class="buyer-details">
+          <div class="buyer-details form-group">
             <div class="row">
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="firstName">First Name<span>*</span></label>
-                <input class="required required-presence u-full-width" type="text" placeholder="First Name" name="firstName">
+                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName">
               </div>
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="lastName">Last Name<span>*</span></label>
-                <input class="required required-presence u-full-width" type="text" placeholder="Last Name" name="lastName">
+                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName">
               </div>
             </div>
             <div class="row">
-              <label for="companyName">Company Name</label>
-              <input class="u-full-width" type="text" placeholder="Company Name" name="companyName">
+              <div class="col-xs-12">
+                <label for="companyName">Company Name</label>
+                <input class="form-control" type="text" placeholder="Company Name" name="companyName">
+              </div>
             </div>
           </div>
 
           <hr/>
           
-          <div class="address-details">
+          <div class="address-details form-group">
             <div class="row">
-              <label for="address">Address<span>*</span></label>
-              <input class="required required-presence u-full-width" type="text" placeholder="Street Address" name="address[line1]">
-              <input class="u-full-width" type="text" placeholder="Apt / Suite" name="address[line2]">
+              <div class="col-xs-12">
+                <label for="address">Address<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]">
+                <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]">
+              </div>
             </div>
             <div class="row">
-              <label for="city">Town / City<span>*</span></label>
-              <input class="required required-presence u-full-width" type="text" placeholder="Town / City Name" name="city">
+              <div class="col-xs-12">
+                <label for="city">Town / City<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city">
+              </div>
             </div>
             <div class="row">
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="state">State<span>*</span></label>
-                <select name="state" class="required required-state u-full-width">
+                <select name="state" class="required required-state form-control">
                   <option value="">Select a State</option>
                   <option value="co">CO - Colorado</option>
                 </select>
               </div>
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="zip">Zip Code<span>*</span></label>
-                <input class="required required-zip u-full-width" maxlength="10" type="text" placeholder="Zip Code" name="zip">
+                <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip">
               </div>
             </div>  
           </div>
@@ -146,71 +151,79 @@
 
           <div class="row">
             <label class="copy">
-              <div class="one-half column"><p>My billing address is the same</p></div>
-              <div class="one-half column"><input type="checkbox"></div>
+              <div class="col-xs-6"><p>My billing address is the same</p></div>
+              <div class="col-xs-6"><input type="checkbox"></div>
             </label>
           </div>
         </div>
 
-        <div class="billing one-half column">
+        <div class="billing col-xs-6">
           <h5>Billing</h5>
-          <div class="buyer-details">
+          <div class="buyer-details form-group">
             <div class="row">
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="firstName">First Name<span>*</span></label>
-                <input class="required required-presence u-full-width" type="text" placeholder="First Name" name="firstName">
+                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName">
               </div>
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="lastName">Last Name<span>*</span></label>
-                <input class="required required-presence u-full-width" type="text" placeholder="Last Name" name="lastName">
+                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName">
               </div>
             </div>
             <div class="row">
-              <label for="companyName">Company Name</label>
-              <input class="u-full-width" type="text" placeholder="Company Name" name="companyName">
+              <div class="col-xs-12">
+                <label for="companyName">Company Name</label>
+                <input class="form-control" type="text" placeholder="Company Name" name="companyName">
+              </div>
             </div>
           </div>
 
           <hr/>
           
-          <div class="address-details">
+          <div class="address-details form-group">
             <div class="row">
-              <label for="address">Address<span>*</span></label>
-              <input class="required required-presence u-full-width" type="text" placeholder="Street Address" name="address[line1]">
-              <input class="u-full-width" type="text" placeholder="Apt / Suite" name="address[line2]">
+              <div class="col-xs-12">
+                <label for="address">Address<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]">
+                <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]">
+              </div>
             </div>
             <div class="row">
-              <label for="city">Town / City<span>*</span></label>
-              <input class="required required-presence u-full-width" type="text" placeholder="Town / City Name" name="city">
+              <div class="col-xs-12">
+                <label for="city">Town / City<span>*</span></label>
+                <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city">
+              </div>
             </div>
             <div class="row">
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="state">State<span>*</span></label>
-                <select name="state" class="required required-state u-full-width">
+                <select name="state" class="required required-state form-control">
                   <option value="">Select a State</option>
                   <option value="co">CO - Colorado</option>
                 </select>
               </div>
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="zip">Zip Code<span>*</span></label>
-                <input class="required required-zip u-full-width" maxlength="10" type="text" placeholder="Zip Code" name="zip">
+                <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip">
               </div>
             </div>  
           </div>
 
           <hr/>
 
-          <div class="credit-card-details">
+          <div class="credit-card-details form-group">
             <div class="row">
-              <label for="cc-number">Card Number<span>*</span></label>
-              <input class="required cc-number u-full-width" type="text" maxlength="19" placeholder="Credit Card Number" name="cc-number">
+              <div class="col-xs-12">
+                <label for="cc-number">Card Number<span>*</span></label>
+                <input class="required cc-number form-control" type="text" maxlength="19" placeholder="Credit Card Number" name="cc-number">
+              </div>
             </div>
             <div class="row">
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="cc-expiration">Expiration<span>*</span></label>
                 <div class="row">
-                  <div class="six columns">
-                    <select name="cc-mm" class="required cc-mm u-full-width">
+                  <div class="col-xs-6">
+                    <select name="cc-mm" class="required cc-mm form-control">
                       <option value=""> - MM - </option>
                       <option value="01">01 - Jan</option>
                       <option value="02">02 - Feb</option>
@@ -226,8 +239,8 @@
                       <option value="12">12 - Dec</option>
                     </select>
                   </div>
-                  <div class="six columns">
-                    <select name="cc-yy" class="required cc-yy u-full-width">
+                  <div class="col-xs-6">
+                    <select name="cc-yy" class="required cc-yy form-control">
                       <option value=""> - YY - </option>
                       <option value="2016">2016</option>
                       <option value="2017">2017</option>
@@ -240,9 +253,9 @@
                   </div>
                 </div>
               </div>
-              <div class="one-half column">
+              <div class="col-xs-6">
                 <label for="cc-cvc">CVC<span>*</span></label>
-                <input class="required required-presence cc-cvc u-full-width" type="text" placeholder="CVC" name="cc-cvc">
+                <input class="required required-presence cc-cvc form-control" type="text" placeholder="CVC" name="cc-cvc">
               </div>
             </div>
 
@@ -251,7 +264,7 @@
 
             <hr/>
 
-            <button id="purchase" class="button-primary">Purchase</button>
+            <button id="purchase" class="btn btn-primary btn-lg">Purchase</button>
           </div>
         </div>
       </div>
@@ -260,11 +273,11 @@
   
   <footer>
     <div class="row">
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>Visit</span> Us</h4>
         <div class="map"></div>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>On</span> Sale</h4>
         <ul class="product-list">
           <li>
@@ -301,7 +314,7 @@
           </li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>More</span> Info</h4>
         <ul>
           <li><a href="#">&mdash; Shipping &amp; Returns</a></li>
@@ -310,7 +323,7 @@
           <li><a href="#">&mdash; Contact Us</a></li>
         </ul>
       </div>
-      <div class="three columns">
+      <div class="col-xs-3">
         <h4><span>In</span> The News</h4>
         <ul class="news">
           <li>

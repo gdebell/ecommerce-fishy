@@ -48,9 +48,10 @@ nav ul.sub-menu {
   border-bottom: 1px solid #EFEFEF;
   display: none;
   left: 0;
+  padding-left: 0;
   position: absolute;
   text-align: center;
-  top: 70px;
+  top: 60px;
   width: 100%;
   z-index: 10; }
   nav ul.sub-menu li {
@@ -171,21 +172,16 @@ footer {
   margin: 75px 0 25px; }
   .purchase-confirmation h3 {
     background: url("../../images/graphic-bg1.png");
-    padding: 50px 25px;
+    margin: 0;
+    padding: 75px 25px;
     text-align: center; }
-  .purchase-confirmation .one-half:last-child {
-    background: #EFEFEF;
-    padding: 10px 25px;
-    margin-bottom: 50px; }
-    .purchase-confirmation .one-half:last-child table {
-      margin-bottom: 0; }
-    .purchase-confirmation .one-half:last-child th, .purchase-confirmation .one-half:last-child td {
-      text-align: center; }
-    .purchase-confirmation .one-half:last-child tr:last-child td {
-      border-bottom: none; }
+  .purchase-confirmation table {
+    margin-top: 25px; }
 
 .shipping, .billing {
   margin-bottom: 25px; }
+  .shipping .row, .billing .row {
+    margin-top: 25px; }
   .shipping h5, .billing h5 {
     background: #EFEFEF;
     padding: 10px 20px; }
@@ -196,8 +192,16 @@ footer {
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
     color: red;
     outline: 0 none; }
-  .shipping .copy p, .billing .copy p {
-    text-align: right; }
+  .shipping label.copy, .billing label.copy {
+    display: block; }
+    .shipping label.copy p, .billing label.copy p {
+      text-align: right; }
+
+label[for="address"] + input {
+  margin-bottom: 10px; }
+
+label[for="cc-expiration"] + .row {
+  margin-top: 0; }
 
 .cc-message p {
   border-radius: 10px;
