@@ -4,6 +4,7 @@ window.allFieldsValid = (function () {
     $(".required-state, .cc-mm, .cc-yy").on("click change", checkPresence);
     $(".required-zip").on("keyup focus", checkZip);
     $(".cc-number").on("keyup", checkCardNumber);
+    $(".cc-number").on("blur", formatCardNumber);
     $(".copy input[type='checkbox']").on("change", copyShippingToBilling);
   });
 
@@ -31,13 +32,15 @@ window.allFieldsValid = (function () {
 
   function checkCardNumber () {
     var number = $(this).val().replace(/[^0-9]/g,"");
+    
+    ( number.length !== 16 ) ? $(this).addClass("warning") : $(this).removeClass("warning");
+  };
 
-    if ( number.length > 4 ) {
-      var separated = number.replace(/(.{4})/g, "$1 ");
-      $(this).val(separated);
-    };
-
-    ( number.length < 16 ) ? $(this).addClass("warning") : $(this).removeClass("warning");
+  function formatCardNumber () {
+    var number = $(this).val().replace(/[^0-9]/g,"");
+    var separated = number.replace(/(.{4})/g, "$1 ");
+    
+    $(this).val(separated);
   };
 
   function copyShippingToBilling () {
