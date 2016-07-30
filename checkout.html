@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <title>Fishy</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="icon" href="src/images/aquarium.png">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
     <link rel="stylesheet" href="src/genericons/genericons.css">
@@ -19,141 +17,137 @@
             <a class="navbar-brand" href="index.html"><img class="fishy" src="src/svg/aquarium.svg" alt="" /><span class="fishyText">Fishy</span></a>
             <span id="menuToggle" class="genericon genericon-menu"></span>
           </div>
-
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="genericon genericon-downarrow"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="products.html">All Products</a></li>
-                <li><a href="#">Another action</a></li>
               </ul>
             </li>
-
             <li role="navigation"><a class="navbar-link" href="checkout.html">Cart: <span id="cart"></span></a></li>
-
-
           </ul>
         </div>
       </nav>
     </header>
+    <main>
     <div class="container">
-      <h1 class=col-md-12>Checkout
-      </h1>
-      <div class="row">
-        <div class="col-md-12 well well-lg">
+      <div class="col-md-12">
+        <h1>Checkout</h1>
+        <div class=" well well-lg">
           <h3>Receipt</h3>
           <p>Stuff you don't needs</p>
         </div>
-      </div>
-      <div class="row">
+        <br>
         <hr>
       </div>
-        <form>
-  <!-- SHIPPING INFO -->
-          <div class="col-md-4"><h3>Shipping</h3>
+      <form>
+        <!-- SHIPPING INFO -->
+        <div class="col-md-4"><h3>Shipping</h3>
 
-            <div class="form-group firstNameShipping">
-              <label>First Name</label>
-              <input type="text" class="form-control firstNameS">
-            </div>
-             <div class="form-group lastNameShipping">
-              <label>Last Name</label>
-              <input type="text" class="form-control lastNameS">
-            </div>
-            <div class="form-group">
-              <label>Company</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group addressShipping">
-              <label>Address Line 1</label>
-              <input type="text" class="form-control addressS">
-            </div>
-            <div class="form-group">
-              <label>Addresss Line 2</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group cityShipping">
-              <label>City</label>
-              <input type="text" class="form-control cityS">
-            </div>
-            <div class="form-group stateShipping">
-              <label>State</label>
-              <select class="form-control dropDownS stateS">
-                <option disabled selected value="no_state">-Select Your State-</option>
-              </select>
-            </div>
-            <div class="form-group zipShipping">
-              <label>Zip</label>
-              <input type="number" class="form-control zipS">
-            </div>
-            <div class="form-group">
-              <label>Billing Same As Shipping?
-                <input type="checkbox" class="form-control sameAs">
-              </label>
-            </div>
+          <div class="form-group firstNameShipping required">
+            <label>First Name</label>
+            <input type="text" class="form-control firstNameS">
           </div>
-  <!-- BILLING INFO -->
-        <section>
-          <div class="col-md-4"><h3>Billing</h3>
+            <div class="form-group lastNameShipping required">
+            <label>Last Name</label>
+            <input type="text" class="form-control lastNameS">
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group addressShipping required">
+            <label>Address Line 1</label>
+            <input type="text" class="form-control addressS">
+          </div>
+          <div class="form-group">
+            <label>Addresss Line 2</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group cityShipping required">
+            <label>City</label>
+            <input type="text" class="form-control cityS">
+          </div>
+          <div class="form-group stateShipping required">
+            <label>State</label>
+            <select class="form-control dropDownS stateS required">
+              <option disabled selected value="no_state">-Select Your State-</option>
+            </select>
+          </div>
+          <div class="form-group zipShipping required">
+            <label>Zip</label>
+            <input type="number" class="form-control zipS">
+          </div>
+          <div class="form-group">
+            <label>Billing Same As Shipping?
+              <input type="checkbox" class="form-control sameAs">
+            </label>
+          </div>
+        </div>
+        <!-- BILLING INFO -->
+        <div class="col-md-4"><h3>Billing</h3>
 
-            <div class="form-group firstNameBilling">
-              <label>First Name</label>
-              <input class="form-control firstNameB">
-            </div>
-            <div class="form-group lastNameBilling">
-              <label>Last Name</label>
-              <input class="form-control lastNameB">
-            </div>
-            <div class="form-group">
-              <label>Company</label>
-              <input class="form-control">
-            </div>
-            <div class="form-group addressBilling">
-              <label>Address Line 1</label>
-              <input class="form-control addressB">
-            </div>
-            <div class="form-group">
-              <label>Addresss Line 2</label>
-              <input class="form-control">
-            </div>
-            <div class="form-group cityBilling">
-              <label>City</label>
-              <input type="text" class="form-control cityB">
-            </div>
-            <div class="form-group stateBilling">
-              <label>State</label>
-              <select class="form-control dropDown dropDownB">
-                <option disabled selected value="no_state">-Select Your State-</option>
-              </select>
-            </div>
-            <div class="form-group zipBilling">
-              <label>Zip</label>
-              <input type="number" class="form-control zipB">
-            </div>
-
+          <div class="form-group firstNameBilling required">
+            <label>First Name</label>
+            <input class="form-control firstNameB">
+          </div>
+          <div class="form-group lastNameBilling required">
+            <label>Last Name</label>
+            <input class="form-control lastNameB">
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input class="form-control">
+          </div>
+          <div class="form-group addressBilling required">
+            <label>Address Line 1</label>
+            <input class="form-control addressB">
+          </div>
+          <div class="form-group">
+            <label>Addresss Line 2</label>
+            <input class="form-control">
+          </div>
+          <div class="form-group cityBilling required">
+            <label>City</label>
+            <input type="text" class="form-control cityB">
+          </div>
+          <div class="form-group stateBilling required">
+            <label>State</label>
+            <select class="form-control dropDown dropDownB">
+              <option disabled selected value="no_state">-Select Your State-</option>
+            </select>
+          </div>
+          <div class="form-group zipBilling required">
+            <label>Zip</label>
+            <input type="number" class="form-control zipB">
           </div>
 
-          <div class="col-md-4"><h3>Credit Card Info</h3>
-  <!-- CREDIT CARD INFO -->
-            <div class="form-group cardNumber">
-              <label>Credit Card Number</label>
-              <input class="form-control cardNum">
-            </div>
-            <div class="form-group expirationDate">
-              <label>Expiration</label>
-              <input class="form-control expiration">
-            </div>
-            <div class="form-group CVCNumber">
-              <label>CVC</label>
-              <input class="form-control CVCnum">
-            </div>
-            <div class="form-group">
-              <input class="btn btn-primary btn-lg btn-block" type="submit" value="Purchase">
-            </div>
-          </div>
+        </div>
 
-        </form>
+        <div class="col-md-4"><h3>Credit Card Info</h3>
+          <!-- CREDIT CARD INFO -->
+          <div class="form-group cardNumber required">
+            <label>Credit Card Number</label>
+            <input class="form-control cardNum">
+          </div>
+          <div class="form-group expirationDate required">
+            <label>Expiration</label>
+            <input class="form-control expiration">
+          </div>
+          <div class="form-group CVCNumber required">
+            <label>CVC</label>
+            <input class="form-control CVCnum required">
+          </div>
+          <p class="save-status">
+          </p>
+          <div class="form-group">
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Purchase">
+          </div>
+        </div>
+
+      </form>
     </div>
+    </main>
     <footer>
       <div class="container">
         <div class="row">
@@ -186,6 +180,7 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="src/scripts/header.js"></script>

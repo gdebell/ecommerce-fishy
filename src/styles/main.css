@@ -285,3 +285,11 @@ footer a:last-of-type {
 
 
 /*products page css*/
+
+/*.productRow .col-md-4 {
+  padding: 0;
+}*/
+
+.col-md-9#productRow {
+  padding: 0;
+}

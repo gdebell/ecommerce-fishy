@@ -1,6 +1,7 @@
 $(document).on('ready', function() {
   console.log('GO TEAM - Checkout');
   nameCityAddressValidation();
+
   stateValidations();
 
   // stateValidate('.dropDownS', '.stateShipping');
@@ -16,6 +17,7 @@ $(document).on('ready', function() {
   expValidate('.expiration','.expirationDate');
   //copy shipping info into billing
   copyShipping();
+  submitValidation();
 
 
 });
@@ -29,8 +31,8 @@ HELPER FUNCTIONS
 */
 
 function textValidate(input, divClass) {
-  $(input).on('blur keydown', function() {
-    if ($(this).val().length < 2) {
+  $(input).on('blur input', function() {
+    if ($(this).val().length < 3) {
       $(divClass).addClass('has-error');
       $(divClass).removeClass('has-success');
     } else {
@@ -139,3 +141,34 @@ function stateValidations() {
 };
 
 //$('billingClass').val($('shippingClass').val())
+function submitValidation (){
+  $('form').on('submit', function(event) {
+    console.log()
+    event.preventDefault();
+
+    if ($('div').hasClass('has-error') === true || $('.required.has-error').length === 0) {
+      var errorMessage = "Oops, looks like you messed up. Try again."
+      shakeInput('.has-error');
+      $(".save-status").empty().append('<p class="alert alert-dismissible alert-danger">' + errorMessage + '</p>');
+      $(".save-status").fadeIn(500).delay(2000).fadeOut(500);
+      }
+    else {
+      var SuccessMessage = "You can fill out forms. Great Job!"
+      $(".save-status").empty().append('<p class="alert alert-dismissible alert-success">' + SuccessMessage + '</p>');
+      $(".save-status").fadeIn(500).delay(2000).fadeOut(500);
+      }
+  });
+}
+
+function shakeInput(divId) {
+      $(divId).animate({
+          "margin-left": "75px"
+      }, 50);
+      $(divId).animate({
+          "margin-left": "-75px"
+      }, 50);
+      $(divId).animate({
+          "margin-left": "0px"
+      }, 50);
+
+  };
