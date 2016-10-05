@@ -1,365 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Unit 1 Project - eCommerce Site: Checkout</title>
-    
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <head>
+    <title>Fishy</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="stylesheet" href="styles/css/checkout.css"></link>
+    <link rel="icon" href="src/images/aquarium.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/genericons/genericons.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img class="fishy" src="src/svg/aquarium.svg" alt="" /><span class="fishyText">Fishy</span></a>
+            <span id="menuToggle" class="genericon genericon-menu"></span>
+          </div>
 
-  <script type="text/javascript" src="vendor/js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-</head>
-<body>
-  <header class="row">
-    <div class="col-xs-3">
-      <h4><a href="./index.html">e<span>Commerce</span></a></h4>
-    </div>
-    
-    <nav class="col-xs-6">
-      <ul>
-        <li><a class="nav-link" href="./products.html">Men</a></li>
-        <li><a class="nav-link" href="./products.html">Women</a></li>
-        <li>
-          <a class="nav-link" href="./products.html">Accessories</a>
-          <i class="fa fa-chevron-down"></i>
-          <ul class="sub-menu">
-            <li><a href="./products.html">Jewelry</a></li>
-            <li><a href="./products.html">Sunglasses</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="genericon genericon-downarrow"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="products.html">All Products</a></li>
+              </ul>
+            </li>
+
+            <li role="navigation"><a class="navbar-link" href="checkout.html">Cart: <span id="cart"></span></a></li>
+
+
           </ul>
-        </li>
-        <li>
-          <a class="nav-link" href="./products.html">Sale</a>
-          <i class="fa fa-chevron-down"></i>
-          <ul class="sub-menu">
-            <li><a href="./products.html">Men</a></li>
-            <li><a href="./products.html">Women</a></li>
-            <li><a href="./products.html">Accessories</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <aside class="col-xs-3">
-      <div class="checkout">
-        <p>
-          <a href="./checkout.html">
-            <i class="fa fa-shopping-basket"></i>
-            <span>3</span>
-            Items
-          </a>
-        </p>
-      </div>
-    </aside>
-  </header>
-
-  <div class="container">    
-    <div class="purchase-confirmation row">
-      <div class="col-xs-6">
-        <h3>Thank you <span>for your purchase!</span></h3>
-      </div>
-
-      <div class="col-xs-6">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Quantity</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Basic Shirt</td>
-              <td>x2</td>
-              <td>$50.00</td>
-            </tr>
-            <tr>
-              <td>Sunglasses</td>
-              <td>x1</td>
-              <td>$40.00</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><strong>TOTAL</strong></td>
-              <td>$90.00</td>
-            </tr>
-          </tbody>
-        </table>  
-      </div>
-    </div>
-
-    <form action="#">
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <h1 class=col-md-12>Checkout
+      </h1>
       <div class="row">
-        <div class="shipping col-xs-6">
-          <h5>Shipping</h5>
-          <div class="buyer-details form-group">
-            <div class="row">
-              <div class="col-xs-6">
-                <label for="firstName">First Name<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName">
-              </div>
-              <div class="col-xs-6">
-                <label for="lastName">Last Name<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="companyName">Company Name</label>
-                <input class="form-control" type="text" placeholder="Company Name" name="companyName">
-              </div>
-            </div>
-          </div>
-
-          <hr/>
-          
-          <div class="address-details form-group">
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="address">Address<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]">
-                <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="city">Town / City<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <label for="state">State<span>*</span></label>
-                <select name="state" class="required required-state form-control">
-                  <option value="">Select a State</option>
-                  <option value="co">CO - Colorado</option>
-                </select>
-              </div>
-              <div class="col-xs-6">
-                <label for="zip">Zip Code<span>*</span></label>
-                <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip">
-              </div>
-            </div>  
-          </div>
-
-          <hr/>
-
-          <div class="row">
-            <label class="copy">
-              <div class="col-xs-6"><p>My billing address is the same</p></div>
-              <div class="col-xs-6"><input type="checkbox"></div>
-            </label>
-          </div>
+        <div class="col-md-12 well well-lg">
+          <h3>Receipt</h3>
+          <p>Stuff you don't needs</p>
         </div>
-
-        <div class="billing col-xs-6">
-          <h5>Billing</h5>
-          <div class="buyer-details form-group">
-            <div class="row">
-              <div class="col-xs-6">
-                <label for="firstName">First Name<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="First Name" name="firstName">
-              </div>
-              <div class="col-xs-6">
-                <label for="lastName">Last Name<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Last Name" name="lastName">
-              </div>
+      </div>
+      <div class="row">
+        <hr>
+      </div>
+        <form>
+  <!-- SHIPPING INFO -->
+          <div class="col-md-4"><h3>Shipping</h3>
+            <div class="form-group firstNameShipping required">
+              <label>First Name</label>
+              <input type="text" class="form-control firstNameS">
             </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="companyName">Company Name</label>
-                <input class="form-control" type="text" placeholder="Company Name" name="companyName">
-              </div>
+             <div class="form-group lastNameShipping required">
+              <label>Last Name</label>
+              <input type="text" class="form-control lastNameS">
+            </div>
+            <div class="form-group">
+              <label>Company</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group addressShipping required">
+              <label>Address Line 1</label>
+              <input type="text" class="form-control addressS">
+            </div>
+            <div class="form-group">
+              <label>Addresss Line 2</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group cityShipping required">
+              <label>City</label>
+              <input type="text" class="form-control cityS">
+            </div>
+            <div class="form-group stateShipping required">
+              <label>State</label>
+              <select class="form-control dropDownS stateS required">
+                <option disabled selected value="no_state">-Select Your State-</option>
+              </select>
+            </div>
+            <div class="form-group zipShipping required">
+              <label>Zip</label>
+              <input type="number" class="form-control zipS">
+            </div>
+            <div class="form-group">
+              <label>Billing Same As Shipping?
+                <input type="checkbox" class="form-control sameAs">
+              </label>
+            </div>
+          </div>
+  <!-- BILLING INFO -->
+        <section>
+          <div class="col-md-4"><h3>Billing</h3>
+            <div class="form-group firstNameBilling required">
+              <label>First Name</label>
+              <input class="form-control firstNameB">
+            </div>
+            <div class="form-group lastNameBilling required">
+              <label>Last Name</label>
+              <input class="form-control lastNameB">
+            </div>
+            <div class="form-group">
+              <label>Company</label>
+              <input class="form-control">
+            </div>
+            <div class="form-group addressBilling required">
+              <label>Address Line 1</label>
+              <input class="form-control addressB">
+            </div>
+            <div class="form-group">
+              <label>Addresss Line 2</label>
+              <input class="form-control">
+            </div>
+            <div class="form-group cityBilling required">
+              <label>City</label>
+              <input type="text" class="form-control cityB">
+            </div>
+            <div class="form-group stateBilling required">
+              <label>State</label>
+              <select class="form-control dropDown dropDownB">
+                <option disabled selected value="no_state">-Select Your State-</option>
+              </select>
+            </div>
+            <div class="form-group zipBilling required">
+              <label>Zip</label>
+              <input type="number" class="form-control zipB">
+            </div>
+
+          </div>
+
+          <div class="col-md-4"><h3>Credit Card Info</h3>
+  <!-- CREDIT CARD INFO -->
+            <div class="form-group cardNumber required">
+              <label>Credit Card Number</label>
+              <input class="form-control cardNum">
+            </div>
+            <div class="form-group expirationDate required">
+              <label>Expiration</label>
+              <input class="form-control expiration">
+            </div>
+            <div class="form-group CVCNumber required">
+              <label>CVC</label>
+              <input class="form-control CVCnum required">
+            </div>
+            <p class="save-status">
+            </p>
+            <div class="form-group">
+              <input class="btn btn-primary btn-lg btn-block" type="submit" value="Purchase">
             </div>
           </div>
 
-          <hr/>
-          
-          <div class="address-details form-group">
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="address">Address<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Street Address" name="address[line1]">
-                <input class="form-control" type="text" placeholder="Apt / Suite" name="address[line2]">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="city">Town / City<span>*</span></label>
-                <input class="required required-presence form-control" type="text" placeholder="Town / City Name" name="city">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <label for="state">State<span>*</span></label>
-                <select name="state" class="required required-state form-control">
-                  <option value="">Select a State</option>
-                  <option value="co">CO - Colorado</option>
-                </select>
-              </div>
-              <div class="col-xs-6">
-                <label for="zip">Zip Code<span>*</span></label>
-                <input class="required required-zip form-control" maxlength="10" type="text" placeholder="Zip Code" name="zip">
-              </div>
-            </div>  
+        </form>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Visit Us</h3>
+            <hr>
+            <div id="googleMap"></div>
           </div>
-
-          <hr/>
-
-          <div class="credit-card-details form-group">
-            <div class="row">
-              <div class="col-xs-12">
-                <label for="cc-number">Card Number<span>*</span></label>
-                <input class="required cc-number form-control" type="text" maxlength="19" placeholder="Credit Card Number" name="cc-number">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <label for="cc-expiration">Expiration<span>*</span></label>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <select name="cc-mm" class="required cc-mm form-control">
-                      <option value=""> - MM - </option>
-                      <option value="01">01 - Jan</option>
-                      <option value="02">02 - Feb</option>
-                      <option value="03">03 - Mar</option>
-                      <option value="04">04 - Apr</option>
-                      <option value="05">05 - May</option>
-                      <option value="06">06 - Jun</option>
-                      <option value="07">07 - Jul</option>
-                      <option value="08">08 - Aug</option>
-                      <option value="09">09 - Sep</option>
-                      <option value="10">10 - Oct</option>
-                      <option value="11">11 - Nov</option>
-                      <option value="12">12 - Dec</option>
-                    </select>
-                  </div>
-                  <div class="col-xs-6">
-                    <select name="cc-yy" class="required cc-yy form-control">
-                      <option value=""> - YY - </option>
-                      <option value="2016">2016</option>
-                      <option value="2017">2017</option>
-                      <option value="2018">2018</option>
-                      <option value="2019">2019</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6">
-                <label for="cc-cvc">CVC<span>*</span></label>
-                <input class="required required-presence cc-cvc form-control" type="text" placeholder="CVC" name="cc-cvc">
-              </div>
-            </div>
-
-            <div class="cc-message row">
-            </div>
-
-            <hr/>
-
-            <button id="purchase" class="btn btn-primary btn-lg">Purchase</button>
+          <div class="col-md-3 col-sm-4">
+            <h3>Fish Tank</h3>
+            <hr>
+            <div id="catch"></div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <h3>News</h3>
+            <hr>
+            <h4>Fish Are Friends, Not Food</h4>
+            <p>
+              Brooklyn letterpress bushwick, portland slow-carb trust fund craft beer helvetica direct trade roof party ethical wayfarers. Kinfolk taxidermy 3 wolf moon readymade, lo-fi tote bag direct trade dreamcatcher venmo pour-over.
+            </p>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <h3>Social</h3>
+            <hr>
+            <a href="#"><span class="genericon genericon-instagram"></span></a>
+            <a href="#"><span class="genericon genericon-twitter"></span></a>
+            <a href="#"><span class="genericon genericon-facebook-alt"></span></a>
+            <a href="#"><span class="genericon genericon-linkedin"></span></a>
           </div>
         </div>
       </div>
-    </form>
-  </div>
-  
-  <footer>
-    <div class="row">
-      <div class="col-xs-3">
-        <h4><span>Visit</span> Us</h4>
-        <div class="map"></div>
-      </div>
-      <div class="col-xs-3">
-        <h4><span>On</span> Sale</h4>
-        <ul class="product-list">
-          <li>
-            <img src="http://placehold.it/250">
-            
-            <div class="product-detail">
-              <h6><a href="#">Product 1</a></h6>
-              <span><strike>$ 12.00</strike> $ 6.00</span>
-            </div>
-          </li>
-          <li>
-            <img src="http://placehold.it/250">
-            
-            <div class="product-detail">
-              <h6><a href="#">Product 2</a></h6>
-              <span><strike>$ 53.00</strike> $ 25.00</span>
-            </div>
-          </li>
-          <li>
-            <img src="http://placehold.it/250">
-            
-            <div class="product-detail">
-              <h6><a href="#">Product 3</a></h6>
-              <span><strike>$ 82.00</strike> $ 60.00</span>
-            </div>
-          </li>
-          <li>
-            <img src="http://placehold.it/250">
-            
-            <div class="product-detail">
-              <h6><a href="#">Product 4</a></h6>
-              <span><strike>$ 125.00</strike> $ 90.00</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="col-xs-3">
-        <h4><span>More</span> Info</h4>
-        <ul>
-          <li><a href="#">&mdash; Shipping &amp; Returns</a></li>
-          <li><a href="#">&mdash; International Shipping</a></li>
-          <li><a href="#">&mdash; Secure Shoping</a></li>
-          <li><a href="#">&mdash; Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-3">
-        <h4><span>In</span> The News</h4>
-        <ul class="news">
-          <li>
-            <article>
-              <h6><a href="#">Fall Line Released</a></h6>
-              <aside>September 10th, 2015</aside>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h6><a href="#">Our Factories</a></h6>
-              <aside>August 30th, 2015</aside>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h6><a href="#">A Letter from Our CEO</a></h6>
-              <aside>February 2nd, 2015</aside>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h6><a href="#">What Goes into Production?</a></h6>
-              <aside>January 18th, 2015</aside>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>Copyright © 2015 <span>ECOMMERCE</span> All Rights Reserved</p>
-    </div>
-  </footer>
-
-  <script type="text/javascript" src="./scripts/sub-menu.js"></script>
-  <script type="text/javascript" src="./scripts/checkout-form-validation.js"></script>
-  <script type="text/javascript" src="./scripts/checkout-stripe.js"></script>
-</body>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="src/scripts/header.js"></script>
+    <script src="src/scripts/index.js"></script>
+    <script src="src/scripts/products.js"></script>
+    <script src="src/scripts/checkout.js"></script>
+    <script src="src/scripts/footer.js"></script>
+    <script src="src/scripts/states.js"></script>
+  </body>
 </html>

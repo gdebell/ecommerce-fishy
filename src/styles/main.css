@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+/*.white {
+  background-color: white;
+  border-radius: 15px;
+}*/
+
+#carousel {
+  margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    height: 350px;
+    width: 100%;
+    background-color: #2c3e50;
+}
+#photoContainer {
+    width: 67%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#photoContainer img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+}
+#rightButton {
+    line-height: 0px;
+    margin-top: 125px;
+    height: 50px;
+    font-size: 30px;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+#leftButton {
+    line-height: 0px;
+    margin-top: 125px;
+    height: 50px;
+    font-size: 30px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+#products {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    height: auto;
+    width: 100%;
+    background-color: #18bc9c;
+}
+#productImage {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: white;
+}
+.rating {
+  display: inline-block;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+#signup {
+  padding-top: 5px;
+  background-color: #ecf0f1;
+}
+#submitButton{
+  margin-top: 26px;
+}
+#emailFormGroup .form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+#shoppingCart1 img, #shoppingCart2 img, #shoppingCart3 img {
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  position: absolute;
+  display: none;
+  opacity: 0.75;
+}
+
+#fishBox {
+  margin-left: 100px;
+}
+#fishHeader, #fishHeader+p{
+  text-align: center;
+}
+.fishmailImg {
+  margin: 0 auto;
+  display: block;
+}
+/* ------------------ Body ------------------ */
+
+body {
+  background: #2c3e50;
+  cursor: url('../images/fishing-rod.png'), auto;
+}
+
+a {
+  color: white;
+}
+
+a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #18bc9c;
+  text-decoration: none;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  z-index: 1;
+}
+
+header .container {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  z-index: 1000;
+  position: absolute;;
+}
+
+.genericon-menu {
+  display: none;
+  color: white;
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+
+#menuToggle
+{
+  display: none;
+  color: white;
+  right: 15px;
+  top: 15px;
+  position: absolute;
+}
+
+#menuToggle.toggled .genericon:before {
+	content: '\f406';
+}
+
+
+header .genericon:not(#menuToggle) {
+  font-size: 15px !important;
+  vertical-align: bottom;
+}
+
+header .genericon-uparrow {
+  vertical-align: top !important;
+}
+
+header .navbar-brand {
+  padding: 0;
+}
+
+.fishy {
+  position: relative;
+  padding-top: 5px;
+  width: 50px;
+  left: 15px;
+}
+
+.fishyText {
+  position: relative;
+  top: -35px;
+  left: 70px;
+}
+
+/* ------------------ Main - Tommy ------------------ */
+
+/*main {
+  position: relative;
+  max-width: 720px;
+  z-index: 1;
+  background: white;
+  padding: 60px;
+  margin-top: 90px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 85%;
+}*/
+
+.container {
+  z-index: 1;
+  position: relative;
+}
+
+/* ------------------ Footer ------------------ */
+
+footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 21px;
+}
+
+footer img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+footer img:last-of-type {
+  margin-right: 0;
+}
+
+.swim {
+  width: 50px;
+  height:50px;
+  position:fixed;
+  z-index: 1;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.footerImg {
+  float: left;
+  width: 50px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding-bottom: 21px;
+}
+
+footer a {
+  margin-right: 10px;
+}
+
+footer a:last-of-type {
+  margin-right: 0;
+}
+
+.block {
+  display: block;
+}
+
+#googleMap {
+  width: 100%;
+  height: 200px;
+}
+
+/* ------------------ Media Queries ------------------ */
+
+@media (max-width: 767px) {
+  header ul {
+    display: none;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+
+  #menuToggle:hover {
+    color: #18bc9c;
+  }
+
+  #googleMap {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  header ul:not(.dropdown-menu) {
+    display: inline !important;
+  }
+}
+
+
+/*products page css*/

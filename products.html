@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Unit 1 Project - eCommerce Site: Products</title>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -18,7 +19,7 @@
     <div class="col-xs-3">
       <h4><a href="./index.html">e<span>Commerce</span></a></h4>
     </div>
-    
+
     <nav class="col-xs-6">
       <ul>
         <li><a class="nav-link" href="./products.html">Men</a></li>
@@ -56,7 +57,7 @@
     </aside>
   </header>
 
-  <div class="container">    
+  <div class="container">
     <div class="row">
       <div class="product-heading">
         <h1>Shop All <span>Products</span></h1>
@@ -181,7 +182,7 @@
       </div>
     </div>
   </div>
-  
+
   <footer>
     <div class="row">
       <div class="col-xs-3">
@@ -193,7 +194,7 @@
         <ul class="product-list">
           <li>
             <img src="http://placehold.it/250">
-            
+
             <div class="product-detail">
               <h6><a href="#">Product 1</a></h6>
               <span><strike>$ 12.00</strike> $ 6.00</span>
@@ -201,7 +202,7 @@
           </li>
           <li>
             <img src="http://placehold.it/250">
-            
+
             <div class="product-detail">
               <h6><a href="#">Product 2</a></h6>
               <span><strike>$ 53.00</strike> $ 25.00</span>
@@ -209,7 +210,7 @@
           </li>
           <li>
             <img src="http://placehold.it/250">
-            
+
             <div class="product-detail">
               <h6><a href="#">Product 3</a></h6>
               <span><strike>$ 82.00</strike> $ 60.00</span>
@@ -217,7 +218,7 @@
           </li>
           <li>
             <img src="http://placehold.it/250">
-            
+
             <div class="product-detail">
               <h6><a href="#">Product 4</a></h6>
               <span><strike>$ 125.00</strike> $ 90.00</span>
@@ -272,4 +273,116 @@
   <script type="text/javascript" src="./scripts/sub-menu.js"></script>
   <script type="text/javascript" src="./scripts/product-grid.js"></script>
 </body>
+</html>
+=======
+
+  <head>
+    <title>Fishy</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="src/images/aquarium.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/genericons/genericons.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img class="fishy" src="src/svg/aquarium.svg" alt="" /><span class="fishyText">Fishy</span></a>
+            <span id="menuToggle" class="genericon genericon-menu"></span>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="genericon genericon-downarrow"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="products.html">All Products</a></li>
+              </ul>
+            </li>
+
+            <li role="navigation"><a class="navbar-link" href="checkout.html">Cart: <span id="cart"></span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Fishy Shop Products</h1>
+      <div class="row white">
+        <br/>
+        <br/>
+        <div class="col-md-3" id="row1">
+          <h2 class="sortProduct1">Sort by item:</h2>
+          <select class="sortProductSelect1" id="select1">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="tankSelect" value=1>Tank Fish</option>
+            <option id ="pondSelect"  value=2>Pond Fish</option>
+            <option id = "aquariumSelect" value=3>Aquarium Fish</option>
+          </select>
+          <br/>
+          <br/>
+          <h2 class="sortProduct2" id="row1">Sort by cost:</h2>
+          <select class="sortProductSelect2" id="select2">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="underTenSelect" value=11>Items under $10</option>
+            <option id ="underTwentyFiveSelect" value=25>Items under $25</option>
+            <option id ="underFiftySelect" value=51>Items under $50</option>
+          </select>
+        </div>
+
+        <div class= "col-md-9" id="row1">
+          <div class="productRow" id="productRow">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Visit Us</h3>
+            <hr>
+            <div id="googleMap"></div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <h3>Fish Tank</h3>
+            <hr>
+            <div id="catch"></div>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <h3>News</h3>
+            <hr>
+            <h4>Fish Are Friends, Not Food</h4>
+            <p>
+              Brooklyn letterpress bushwick, portland slow-carb trust fund craft beer helvetica direct trade roof party ethical wayfarers. Kinfolk taxidermy 3 wolf moon readymade, lo-fi tote bag direct trade dreamcatcher venmo pour-over.
+            </p>
+          </div>
+          <div class="col-md-3 col-sm-4">
+            <h3>Social</h3>
+            <hr>
+            <a href="#"><span class="genericon genericon-instagram"></span></a>
+            <a href="#"><span class="genericon genericon-twitter"></span></a>
+            <a href="#"><span class="genericon genericon-facebook-alt"></span></a>
+            <a href="#"><span class="genericon genericon-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    <script src="src/scripts/header.js"></script>
+    <script src="src/scripts/index.js"></script>
+    <script src="src/scripts/products.js"></script>
+    <script src="src/scripts/checkout.js"></script>
+    <script src="src/scripts/footer.js"></script>
+  </body>
 </html>
