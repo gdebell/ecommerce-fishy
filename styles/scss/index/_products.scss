@@ -1,0 +1,64 @@
+.products {
+  margin-bottom: 50px;
+
+  .graphic-heading {
+    background: $light-grey;
+    background-image: url("../../images/graphic-bg1.png");
+    margin-bottom: 50px;
+    padding: 25px 0;
+    text-align: center;
+
+    h2 { margin: 0; }
+  }
+  
+  h3 {
+    border-top: 2px solid $dark-grey;
+    margin: 15px 0 0;
+    padding: 10px 0 0; 
+  }
+
+  .product-img {
+    width: auto;
+    height: 375px;
+
+    img {
+      width: 100%;
+    }
+
+    .overlay {
+      @include uppercaseRoboto;
+
+      background: $light-blue;
+      bottom: 30px;
+      cursor: pointer;
+      display: none;
+      padding: 10px;
+      position: relative;
+      text-align: center;
+
+      a, a:visited, a:active, a:hover {
+        color: $light-grey;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: darken($light-blue, 10%);
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 10px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .ratings {
+    .review-count span {
+      color: darken($light-blue, 10%);
+    }
+  }
+}

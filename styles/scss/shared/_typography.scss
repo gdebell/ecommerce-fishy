@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+@mixin uppercaseRoboto {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  span { font-weight: 300; }
+}
+
+h1, h2, h3, h4, h5, h6, a.nav-link {
+  @include uppercaseRoboto;
+}

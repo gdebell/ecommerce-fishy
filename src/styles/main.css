@@ -1,7 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
+/*.white {
+  background-color: white;
+  border-radius: 15px;
+}*/
+
 #carousel {
+  margin-top: 30px;
     padding: 20px;
     display: flex;
     height: 350px;
@@ -20,6 +27,7 @@
     padding: 5px;
 }
 #rightButton {
+    line-height: 0px;
     margin-top: 125px;
     height: 50px;
     font-size: 30px;
@@ -28,6 +36,7 @@
     text-align: center;
 }
 #leftButton {
+    line-height: 0px;
     margin-top: 125px;
     height: 50px;
     font-size: 30px;
@@ -73,24 +82,26 @@
   border-color: #FF0000;
   box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
 }
-#shoppingCart1, #shoppingCart2, #shoppingCart3 {
-    width: 100%;
-    background-color: #2c3e50;
-    border-radius: 15px;
-    z-index: 1;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    display:none;
-}
 
 #shoppingCart1 img, #shoppingCart2 img, #shoppingCart3 img {
-  width:100%;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  position: absolute;
+  display: none;
+  opacity: 0.75;
 }
+
 #fishBox {
   margin-left: 100px;
 }
-
+#fishHeader, #fishHeader+p{
+  text-align: center;
+}
+.fishmailImg {
+  margin: 0 auto;
+  display: block;
+}
 /* ------------------ Body ------------------ */
 
 body {

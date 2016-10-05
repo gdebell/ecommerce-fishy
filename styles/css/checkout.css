@@ -1,0 +1,218 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+a:active, a:hover {
+  color: #46c0e6; }
+
+.container-fluid {
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, a.nav-link {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase; }
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, a.nav-link span {
+    font-weight: 300; }
+
+header {
+  background: #2D2D2D; }
+  header h4 {
+    padding-top: 10px;
+    text-align: center; }
+    header h4 a {
+      color: #EFEFEF;
+      text-decoration: none; }
+      header h4 a:hover {
+        color: white; }
+
+nav ul {
+  margin: 0; }
+  nav ul li {
+    color: #EFEFEF;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px 35px 20px 0; }
+    nav ul li a {
+      transition: 0.5s all;
+      color: #1EAEDB;
+      padding: 5px;
+      text-decoration: none; }
+      nav ul li a:hover {
+        color: #46c0e6; }
+    nav ul li:last-child a.nav-link {
+      font-weight: 700; }
+    nav ul li i {
+      display: block; }
+
+nav ul.sub-menu {
+  background: #2D2D2D;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+  display: none;
+  left: 0;
+  padding-left: 0;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  width: 100%;
+  z-index: 10; }
+  nav ul.sub-menu li {
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
+    transition: 0.5s all; }
+    nav ul.sub-menu li:hover a, nav ul.sub-menu li:hover a:visited, nav ul.sub-menu li:hover a:hover {
+      color: #EFEFEF; }
+
+.checkout {
+  background: #EFEFEF;
+  border-radius: 10px;
+  display: block;
+  margin: 20px 35px 20px 0; }
+  .checkout a {
+    color: #2D2D2D;
+    text-decoration: none; }
+  .checkout i {
+    margin-left: 15px; }
+  .checkout span {
+    font-weight: 700;
+    margin-left: 5px; }
+
+footer {
+  background: #2D2D2D;
+  padding-top: 25px; }
+  footer h4 {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #EFEFEF;
+    border-bottom: 1px solid #707070;
+    margin: 25px;
+    padding: 10px 0 20px;
+    text-align: center; }
+    footer h4 span {
+      font-weight: 300; }
+  footer .map {
+    background: #EFEFEF;
+    background-image: url(http://maps.googleapis.com/maps/api/staticmap?autoscale=false&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0x797979%7Clabel:G%7C1062+Delaware+St,+Denver,+CO+80204);
+    background-position: 50%;
+    margin: 25px;
+    height: 300px;
+    width: calc(100% - 50px); }
+  footer ul {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 300;
+    list-style: none;
+    margin: 25px;
+    padding-left: 0px; }
+    footer ul span {
+      font-weight: 300; }
+    footer ul li {
+      border-bottom: 1px solid #707070;
+      margin: 25px 0 0;
+      padding-bottom: 25px; }
+      footer ul li:last-child {
+        border: none; }
+    footer ul a {
+      color: #EFEFEF;
+      text-decoration: none;
+      transition: all 0.3s ease 0s; }
+      footer ul a:hover {
+        padding-left: 5px; }
+  footer .product-list {
+    padding-left: 0; }
+    footer .product-list li {
+      border: none;
+      margin-top: 10px;
+      padding-bottom: 0; }
+    footer .product-list img {
+      display: inline-block;
+      height: auto;
+      width: 50px; }
+    footer .product-list .product-detail {
+      color: #EFEFEF;
+      display: inline-block;
+      margin: 0 20px; }
+      footer .product-list .product-detail h6 {
+        margin-bottom: 0; }
+      footer .product-list .product-detail span {
+        color: #1EAEDB; }
+        footer .product-list .product-detail span strike {
+          color: #EFEFEF;
+          display: inline-block;
+          margin-right: 10px; }
+      footer .product-list .product-detail a:hover {
+        padding-left: 0; }
+  footer .news li {
+    border: none;
+    padding-bottom: 0; }
+  footer .news h6 {
+    font-weight: 300;
+    margin-bottom: 0; }
+    footer .news h6 a {
+      color: #1EAEDB; }
+      footer .news h6 a:hover {
+        color: #46c0e6;
+        padding-left: 0; }
+  footer .news aside {
+    color: #EFEFEF; }
+  footer .copyright {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #202020; }
+    footer .copyright span {
+      font-weight: 300; }
+    footer .copyright p {
+      color: #EFEFEF;
+      margin: 0;
+      padding: 35px 25px 25px; }
+
+.purchase-confirmation {
+  margin: 75px 0 25px; }
+  .purchase-confirmation h3 {
+    background: url("../../images/graphic-bg1.png");
+    margin: 0;
+    padding: 75px 25px;
+    text-align: center; }
+  .purchase-confirmation table {
+    margin-top: 25px; }
+
+.shipping, .billing {
+  margin-bottom: 25px; }
+  .shipping .row, .billing .row {
+    margin-top: 25px; }
+  .shipping h5, .billing h5 {
+    background: #EFEFEF;
+    padding: 10px 20px; }
+  .shipping label span, .billing label span {
+    color: red; }
+  .shipping select.required.warning, .shipping input.required.warning, .billing select.required.warning, .billing input.required.warning {
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    color: red;
+    outline: 0 none; }
+  .shipping label.copy, .billing label.copy {
+    display: block; }
+    .shipping label.copy p, .billing label.copy p {
+      text-align: right; }
+
+label[for="address"] + input {
+  margin-bottom: 10px; }
+
+label[for="cc-expiration"] + .row {
+  margin-top: 0; }
+
+.cc-message p {
+  border-radius: 10px;
+  display: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  text-align: center; }
+  .cc-message p.message-success {
+    color: white;
+    background: #1EAEDB; }
+  .cc-message p.message-warning {
+    background: #EFEFEF;
+    color: #2D2D2D; }

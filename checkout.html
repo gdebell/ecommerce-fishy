@@ -40,99 +40,96 @@
         <br>
         <hr>
       </div>
-      <form>
-        <!-- SHIPPING INFO -->
-        <div class="col-md-4"><h3>Shipping</h3>
+        <form>
+  <!-- SHIPPING INFO -->
+          <div class="col-md-4"><h3>Shipping</h3>
+            <div class="form-group firstNameShipping required">
+              <label>First Name</label>
+              <input type="text" class="form-control firstNameS">
+            </div>
+             <div class="form-group lastNameShipping required">
+              <label>Last Name</label>
+              <input type="text" class="form-control lastNameS">
+            </div>
+            <div class="form-group">
+              <label>Company</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group addressShipping required">
+              <label>Address Line 1</label>
+              <input type="text" class="form-control addressS">
+            </div>
+            <div class="form-group">
+              <label>Addresss Line 2</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group cityShipping required">
+              <label>City</label>
+              <input type="text" class="form-control cityS">
+            </div>
+            <div class="form-group stateShipping required">
+              <label>State</label>
+              <select class="form-control dropDownS stateS required">
+                <option disabled selected value="no_state">-Select Your State-</option>
+              </select>
+            </div>
+            <div class="form-group zipShipping required">
+              <label>Zip</label>
+              <input type="number" class="form-control zipS">
+            </div>
+            <div class="form-group">
+              <label>Billing Same As Shipping?
+                <input type="checkbox" class="form-control sameAs">
+              </label>
+            </div>
+          </div>
+  <!-- BILLING INFO -->
+        <section>
+          <div class="col-md-4"><h3>Billing</h3>
+            <div class="form-group firstNameBilling required">
+              <label>First Name</label>
+              <input class="form-control firstNameB">
+            </div>
+            <div class="form-group lastNameBilling required">
+              <label>Last Name</label>
+              <input class="form-control lastNameB">
+            </div>
+            <div class="form-group">
+              <label>Company</label>
+              <input class="form-control">
+            </div>
+            <div class="form-group addressBilling required">
+              <label>Address Line 1</label>
+              <input class="form-control addressB">
+            </div>
+            <div class="form-group">
+              <label>Addresss Line 2</label>
+              <input class="form-control">
+            </div>
+            <div class="form-group cityBilling required">
+              <label>City</label>
+              <input type="text" class="form-control cityB">
+            </div>
+            <div class="form-group stateBilling required">
+              <label>State</label>
+              <select class="form-control dropDown dropDownB">
+                <option disabled selected value="no_state">-Select Your State-</option>
+              </select>
+            </div>
+            <div class="form-group zipBilling required">
+              <label>Zip</label>
+              <input type="number" class="form-control zipB">
+            </div>
 
-          <div class="form-group firstNameShipping required">
-            <label>First Name</label>
-            <input type="text" class="form-control firstNameS">
-          </div>
-            <div class="form-group lastNameShipping required">
-            <label>Last Name</label>
-            <input type="text" class="form-control lastNameS">
-          </div>
-          <div class="form-group">
-            <label>Company</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group addressShipping required">
-            <label>Address Line 1</label>
-            <input type="text" class="form-control addressS">
-          </div>
-          <div class="form-group">
-            <label>Addresss Line 2</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group cityShipping required">
-            <label>City</label>
-            <input type="text" class="form-control cityS">
-          </div>
-          <div class="form-group stateShipping required">
-            <label>State</label>
-            <select class="form-control dropDownS stateS required">
-              <option disabled selected value="no_state">-Select Your State-</option>
-            </select>
-          </div>
-          <div class="form-group zipShipping required">
-            <label>Zip</label>
-            <input type="number" class="form-control zipS">
-          </div>
-          <div class="form-group">
-            <label>Billing Same As Shipping?
-              <input type="checkbox" class="form-control sameAs">
-            </label>
-          </div>
-        </div>
-        <!-- BILLING INFO -->
-        <div class="col-md-4"><h3>Billing</h3>
-
-          <div class="form-group firstNameBilling required">
-            <label>First Name</label>
-            <input class="form-control firstNameB">
-          </div>
-          <div class="form-group lastNameBilling required">
-            <label>Last Name</label>
-            <input class="form-control lastNameB">
-          </div>
-          <div class="form-group">
-            <label>Company</label>
-            <input class="form-control">
-          </div>
-          <div class="form-group addressBilling required">
-            <label>Address Line 1</label>
-            <input class="form-control addressB">
-          </div>
-          <div class="form-group">
-            <label>Addresss Line 2</label>
-            <input class="form-control">
-          </div>
-          <div class="form-group cityBilling required">
-            <label>City</label>
-            <input type="text" class="form-control cityB">
-          </div>
-          <div class="form-group stateBilling required">
-            <label>State</label>
-            <select class="form-control dropDown dropDownB">
-              <option disabled selected value="no_state">-Select Your State-</option>
-            </select>
-          </div>
-          <div class="form-group zipBilling required">
-            <label>Zip</label>
-            <input type="number" class="form-control zipB">
-          </div>
-
-        </div>
-
-        <div class="col-md-4"><h3>Credit Card Info</h3>
-          <!-- CREDIT CARD INFO -->
-          <div class="form-group cardNumber required">
-            <label>Credit Card Number</label>
-            <input class="form-control cardNum">
-          </div>
-          <div class="form-group expirationDate required">
-            <label>Expiration</label>
-            <input class="form-control expiration">
+          <div class="col-md-4"><h3>Credit Card Info</h3>
+  <!-- CREDIT CARD INFO -->
+            <div class="form-group cardNumber required">
+              <label>Credit Card Number</label>
+              <input class="form-control cardNum">
+            </div>
+            <div class="form-group expirationDate required">
+              <label>Expiration</label>
+              <input class="form-control expiration">
           </div>
           <div class="form-group CVCNumber required">
             <label>CVC</label>
@@ -182,11 +179,13 @@
     </footer>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="src/scripts/header.js"></script>
     <script src="src/scripts/index.js"></script>
     <script src="src/scripts/products.js"></script>
     <script src="src/scripts/checkout.js"></script>
     <script src="src/scripts/footer.js"></script>
+    <script src="src/scripts/states.js"></script>
   </body>
 </html>

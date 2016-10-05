@@ -8,15 +8,6 @@ $(document).on('ready', function() {
     $('header .genericon:not(.genericon-menu)').toggleClass('genericon-uparrow');
   });
 
-  $('footer').on('click', function() {
-    $('.dropdown-menu').removeClass('block');
-    $('header .genericon:not(.genericon-menu)').toggleClass('genericon-uparrow');
-  });
-  $('main').on('click', function() {
-    $('.dropdown-menu').removeClass('block');
-    $('header .genericon:not(.genericon-menu)').toggleClass('genericon-uparrow');
-  });
-
 
 
 

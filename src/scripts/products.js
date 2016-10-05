@@ -1,5 +1,7 @@
 $.ajax ({
+
   url:'http://galvanize-student-apis.herokuapp.com/gcommerce/products',
+
   method: 'GET'
 }).done (function(dataFromSite) {
 

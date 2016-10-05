@@ -1,12 +1,12 @@
-  var carouselArray = ['https://placebear.com/650/300', 'https://placekitten.com/650/300', 'https://placebear.com/649/300'];
+  var carouselArray = ['src/images/fish2 650x300.jpg', 'src/images/fish3 650x300.jpg', 'src/images/fish5-650x300.jpg'];
   var timerReset = 6000;
   var shoppingCartCount = 0;
 
   $(document).on('ready', function() {
       carouselRotate()
-      addToCart('#shoppingCart1', '#product1')
-      addToCart('#shoppingCart2', '#product2')
-      addToCart('#shoppingCart3', '#product3')
+      addToCart('#shoppingCart1 img', '#product1')
+      addToCart('#shoppingCart2 img', '#product2')
+      addToCart('#shoppingCart3 img', '#product3')
       console.log('ready');
 
       $('#rightButton').on('click', function(event) {
@@ -59,11 +59,12 @@
           } else if ((emailStatus) === true) {
               $('#signup').fadeOut(2000)
               setTimeout(function() {
-                  $('#emailFormGroup').replaceWith('<img src="src/images/Fish-mailbox.jpg"/>')
+                  $('#emailFormGroup').replaceWith('<img class="fishmailImg" src="src/images/Fish-mailbox.jpg"/>')
                   $('#signup').fadeIn(2000)
                   $('#checkMark').fadeOut(0).fadeIn(2000)
                   $('#signupDescription').replaceWith('<p>Enjoy the fresh fish!</p>')
                   $('#fishHeader').replaceWith('<header id="fishHeader"> <h2>Thanks!</h2></header>')
+                  $('#submitButton').css('display','none')
               }, 2000)
           }
       });
@@ -72,6 +73,7 @@
   function addToCart(shopDivId, wrapper) {
       $(wrapper).mouseover(function() {
           $(shopDivId).show();
+          $('#shoppingCart3').css('text-align', 'center');
       }).mouseout(function() {
           $(shopDivId).hide();
       });

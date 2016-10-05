@@ -1,5 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <title>Unit 1 Project - eCommerce Site: Products</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="styles/css/products.css"></link>
+
+  <script type="text/javascript" src="vendor/js/jquery-1.11.3.min.js"></script>
+</head>
+<body class="container-fluid">
+  <header class="row">
+    <div class="col-xs-3">
+      <h4><a href="./index.html">e<span>Commerce</span></a></h4>
+    </div>
+
+    <nav class="col-xs-6">
+      <ul>
+        <li><a class="nav-link" href="./products.html">Men</a></li>
+        <li><a class="nav-link" href="./products.html">Women</a></li>
+        <li>
+          <a class="nav-link" href="./products.html">Accessories</a>
+          <i class="fa fa-chevron-down"></i>
+          <ul class="sub-menu">
+            <li><a href="./products.html">Jewelry</a></li>
+            <li><a href="./products.html">Sunglasses</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="nav-link" href="./products.html">Sale</a>
+          <i class="fa fa-chevron-down"></i>
+          <ul class="sub-menu">
+            <li><a href="./products.html">Men</a></li>
+            <li><a href="./products.html">Women</a></li>
+            <li><a href="./products.html">Accessories</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <aside class="col-xs-3">
+      <div class="checkout">
+        <p>
+          <a href="./checkout.html">
+            <i class="fa fa-shopping-basket"></i>
+            <span>3</span>
+            Items
+          </a>
+        </p>
+      </div>
+    </aside>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="product-heading">
+        <h1>Shop All <span>Products</span></h1>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="product-listing row">
+      <div class="sidebar col-xs-3">
+        <div class="sorter">
+          <h4>By <span>Category</span></h4>
+          <ul class="category">
+            <li><a data-category="all" href="#">All</a></li>
+            <li><a data-category="mens" href="#">Men's</a></li>
+            <li><a data-category="womens" href="#">Women's</a></li>
+            <li><a data-category="accessories" href="#">Accessories</a></li>
+            <li><a data-category="sale" href="#">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="sorter">
+          <h4>By <span>Price</span></h4>
+          <ul class="prices">
+            <li><a data-price="all" href="#">All</a></li>
+            <li><a data-price="25" href="#">< $25</a></li>
+            <li><a data-price="50" href="#">$25 - $50</a></li>
+            <li><a data-price="75" href="#">$50 - $75</a></li>
+            <li><a data-price="100" href="#">$75 - $100</a></li>
+            <li><a data-price="above" href="#">> $100</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-9">
+        <div class="row">
+          <div class="product mens col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>30.00</span></h6>
+          </div>
+          <div class="product womens col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=womens">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>60.00</span></h6>
+          </div>
+          <div class="product accessories col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=accessories">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>50.00</span></h6>
+          </div>
+          <div class="product mens sale col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens%20sale">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>15.00</span></h6>
+          </div>
+          <div class="product womens sale col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=womens%20sale">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>10.00</span></h6>
+          </div>
+          <div class="product accessories sale col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=accessories%20sale">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>137.00</span></h6>
+          </div>
+          <div class="product mens accessories col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens%20accessories">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>89.00</span></h6>
+          </div>
+          <div class="product womens accessories col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=womens%20accessories">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>55.00</span></h6>
+          </div>
+          <div class="product mens womens sale col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens%20womens%20accessories%20sale">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>45.00</span></h6>
+          </div>
+          <div class="product mens col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>48.00</span></h6>
+          </div>
+          <div class="product mens col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=mens">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>22.00</span></h6>
+          </div>
+          <div class="product womens col-xs-4">
+            <div class="product-img">
+              <img src="http://placehold.it/500?text=womens">
+            </div>
+            <h5>Product Name</h5>
+            <h6>$ <span>12.00</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col-xs-3">
+        <h4><span>Visit</span> Us</h4>
+        <div class="map"></div>
+      </div>
+      <div class="col-xs-3">
+        <h4><span>On</span> Sale</h4>
+        <ul class="product-list">
+          <li>
+            <img src="http://placehold.it/250">
+
+            <div class="product-detail">
+              <h6><a href="#">Product 1</a></h6>
+              <span><strike>$ 12.00</strike> $ 6.00</span>
+            </div>
+          </li>
+          <li>
+            <img src="http://placehold.it/250">
+
+            <div class="product-detail">
+              <h6><a href="#">Product 2</a></h6>
+              <span><strike>$ 53.00</strike> $ 25.00</span>
+            </div>
+          </li>
+          <li>
+            <img src="http://placehold.it/250">
+
+            <div class="product-detail">
+              <h6><a href="#">Product 3</a></h6>
+              <span><strike>$ 82.00</strike> $ 60.00</span>
+            </div>
+          </li>
+          <li>
+            <img src="http://placehold.it/250">
+
+            <div class="product-detail">
+              <h6><a href="#">Product 4</a></h6>
+              <span><strike>$ 125.00</strike> $ 90.00</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h4><span>More</span> Info</h4>
+        <ul>
+          <li><a href="#">&mdash; Shipping &amp; Returns</a></li>
+          <li><a href="#">&mdash; International Shipping</a></li>
+          <li><a href="#">&mdash; Secure Shoping</a></li>
+          <li><a href="#">&mdash; Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-3">
+        <h4><span>In</span> The News</h4>
+        <ul class="news">
+          <li>
+            <article>
+              <h6><a href="#">Fall Line Released</a></h6>
+              <aside>September 10th, 2015</aside>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6><a href="#">Our Factories</a></h6>
+              <aside>August 30th, 2015</aside>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6><a href="#">A Letter from Our CEO</a></h6>
+              <aside>February 2nd, 2015</aside>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h6><a href="#">What Goes into Production?</a></h6>
+              <aside>January 18th, 2015</aside>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2015 <span>ECOMMERCE</span> All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./scripts/sub-menu.js"></script>
+  <script type="text/javascript" src="./scripts/product-grid.js"></script>
+</body>
+</html>
+=======
+
   <head>
     <title>Fishy</title>
     <meta charset="utf-8">
@@ -29,34 +305,42 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="container">
-        <h1>Fishy Shop Products</h1>
-        <div class="row">
 
-          <div class="col-md-3" id="row1">
-            <h2 class="sortProduct1">Sort by item:</h2>
-            <select class="sortProductSelect1 form-control" id="select1">
-              <option id="blank" disabled selected>Select here:</option>
-              <option id ="tankSelect" value=1>Tank Fish</option>
-              <option id ="pondSelect"  value=2>Pond Fish</option>
-              <option id = "aquariumSelect" value=3>Aquarium Fish</option>
-            </select>
-            <h2 class="sortProduct2" id="row1">Sort by cost:</h2>
-            <select class="sortProductSelect2 form-control" id="select2">
-              <option id="blank" disabled selected>Select here:</option>
-              <option id ="underTenSelect" value=11>Items under $10</option>
-              <option id ="underTwentyFiveSelect" value=25>Items under $25</option>
-              <option id ="underFiftySelect" value=51>Items under $50</option>
-            </select>
-            <br>
-            <button type="button" class="btn btn-primary btn-block" id="resetButtonProduct" >Reset</button>
-            <br>
+    <main>
+    <div class="container">
+      <h1>Fishy Shop Products</h1>
+      <div class="row white">
+        <br/>
+        <br/>
+
+        <div class="col-md-3" id="row1">
+          <h2 class="sortProduct1">Sort by item:</h2>
+          <select class="sortProductSelect1" id="select1">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="tankSelect" value=1>Tank Fish</option>
+            <option id ="pondSelect"  value=2>Pond Fish</option>
+            <option id = "aquariumSelect" value=3>Aquarium Fish</option>
+          </select>
+          <br/>
+          <br/>
+          <h2 class="sortProduct2" id="row1">Sort by cost:</h2>
+          <select class="sortProductSelect2" id="select2">
+            <option id="blank" disabled selected>Select here:</option>
+            <option id ="underTenSelect" value=11>Items under $10</option>
+            <option id ="underTwentyFiveSelect" value=25>Items under $25</option>
+            <option id ="underFiftySelect" value=51>Items under $50</option>
+          </select>
+        </div>
+
+        <div class= "col-md-9" id="row1">
+          <div class="productRow" id="productRow">
           </div>
           <div class="productRow col-md-9 col-sm-12" id="productRow"></div>
         </div>
       </div>
+    </div>
     </main>
+
     <footer>
       <div class="container">
         <div class="row">
@@ -90,7 +374,9 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+
     <script src="src/scripts/header.js"></script>
     <script src="src/scripts/index.js"></script>
     <script src="src/scripts/products.js"></script>
