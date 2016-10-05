@@ -1,0 +1,77 @@
+@import "./shared/globals";
+@import "./shared/typography";
+@import "./shared/nav";
+@import "./shared/footer";
+
+.purchase-confirmation {
+  margin: 75px 0 25px;
+
+  h3 {
+    background: url('../../images/graphic-bg1.png');
+    margin: 0;
+    padding: 75px 25px;
+    text-align: center;
+  }
+
+  table {
+    margin-top: 25px;
+  }
+}
+
+.shipping, .billing {
+  margin-bottom: 25px;
+  
+  .row {
+    margin-top: 25px;
+  }
+
+  h5 {
+    background: $light-grey;
+    padding: 10px 20px;
+  }
+
+  label {
+    span {
+      color: red;
+    }
+  }
+
+  select.required.warning, input.required.warning {
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    color: red;
+    outline: 0 none;
+  }
+
+  label.copy {
+    display: block;
+    p { text-align: right; }
+  }
+}
+
+label[for="address"] + input {
+  margin-bottom: 10px;
+}
+
+label[for="cc-expiration"] + .row {
+  margin-top: 0;
+}
+
+.cc-message p {
+  border-radius: 10px;
+  display: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  
+  &.message-success {
+    color: white;
+    background: $light-blue;
+  }
+
+  &.message-warning {
+    background: $light-grey;
+    color: $dark-grey;
+  }
+}

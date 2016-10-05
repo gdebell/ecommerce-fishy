@@ -1,0 +1,8 @@
+$light-blue: #1EAEDB;
+$light-grey: #EFEFEF;
+$dark-grey: #2D2D2D;
+
+$carousel-height: 400px;
+
+a:active, a:hover { color: lighten($light-blue, 10%); }
+.container-fluid { padding: 0; }
