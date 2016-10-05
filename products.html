@@ -278,10 +278,8 @@
 
   <head>
     <title>Fishy</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="icon" href="src/images/aquarium.png">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
     <link rel="stylesheet" href="src/genericons/genericons.css">
@@ -295,27 +293,26 @@
             <a class="navbar-brand" href="index.html"><img class="fishy" src="src/svg/aquarium.svg" alt="" /><span class="fishyText">Fishy</span></a>
             <span id="menuToggle" class="genericon genericon-menu"></span>
           </div>
-
           <ul class="nav navbar-nav navbar-right">
-
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="genericon genericon-downarrow"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="products.html">All Products</a></li>
               </ul>
             </li>
-
             <li role="navigation"><a class="navbar-link" href="checkout.html">Cart: <span id="cart"></span></a></li>
           </ul>
         </div>
       </nav>
     </header>
 
+    <main>
     <div class="container">
       <h1>Fishy Shop Products</h1>
       <div class="row white">
         <br/>
         <br/>
+
         <div class="col-md-3" id="row1">
           <h2 class="sortProduct1">Sort by item:</h2>
           <select class="sortProductSelect1" id="select1">
@@ -337,11 +334,12 @@
 
         <div class= "col-md-9" id="row1">
           <div class="productRow" id="productRow">
-
           </div>
+          <div class="productRow col-md-9 col-sm-12" id="productRow"></div>
         </div>
       </div>
     </div>
+    </main>
 
     <footer>
       <div class="container">

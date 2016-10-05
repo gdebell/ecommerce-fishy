@@ -60,7 +60,7 @@ var arrProductName = ["x", "Lion Fish", "Turtle", "Shark Fish", "Fish   Bowl Fis
 
 function buildArticles (arr) {
   for (var i=1; i < arr.length; i++) {
-    var productWrapper = $('<div class="col-md-4" id="'+[i+1]+'"></div>');
+    var productWrapper = $('<div class="col-md-4 col-sm-6" id="'+[i+1]+'"></div>');
     productWrapper.append('<img src="./src/images/fish' + [i] + '.jpg"  style="width:100%;"/><h3>' + arrProductName[i] + '</h3><h4>Price: '   + arr[i].price + '</h4><p>'+ arr[i].description + '</p>');
     productWrapper.css("margin-bottom", "50px");
     $("#productRow").append(productWrapper);
